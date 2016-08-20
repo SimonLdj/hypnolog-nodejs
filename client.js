@@ -8,7 +8,7 @@ function PostData(codestring) {
     var post_options = {
         host: 'localhost',
         port: '7000',
-        path: '/in',
+        path: '/vdebug/in',
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
