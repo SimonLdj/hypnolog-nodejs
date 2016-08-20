@@ -1,8 +1,22 @@
 var http = require('http');
 
-function PostData(codestring) {
+// TODO: warp all VDebug logger in some module (or class)
 
-    post_data = JSON.stringify(codestring);
+function log(data) {
+
+    // TODO: support logging a string and warp it with an vdebug-log valid object
+
+    // if logged data not an object, create an error object instead
+    if (typeof data !== "object") {
+        console.error("Logged data expected to be an Object");
+        data = {
+            type : "vdebug-error",
+            error: "Vdebug error in Node.js client: Logged data expected to be an Object.",
+            loggedData : data,
+        }
+    }
+
+    post_data = JSON.stringify(data);
 
     // An object of options to indicate where to post to
     var post_options = {
@@ -30,15 +44,20 @@ function PostData(codestring) {
 }
 
 
-// Usage Example
+// Usage Example:
 
 var obj = {
     'value' : "Test post from Node.js client",
     'number' : 55,
-    num: 77
+    comObj: {
+        foo : "Fofo",
+        x   : 20
+    }
 };
 
 console.log("sending:");
 console.dir(obj);
-PostData(obj);
+
+// Log data
+log(obj);
 
