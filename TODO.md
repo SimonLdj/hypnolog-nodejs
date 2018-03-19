@@ -6,4 +6,5 @@ HypnoLog-nodejs TODO list
 - handle when server is down
 - push some code to github
 - solve async issues (?) (logged data might appear in incorrect order)
+- consider making it Javascript library for client side, and not only node
 

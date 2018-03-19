@@ -1,54 +1,17 @@
-var http = require('http');
+// Hypnolog-node Usage Examples:
 
-// TODO: warp all HypnoLog logger in some module (or class)
-// TODO: handle when server is down
+var HL = require('./hypnolog');
 
-function log(data, type = "object") {
-    
-    // construct HypnoLog object according to the API
-    let json = {
-        data : data,
-        type : type
-    }
-
-    post_data = JSON.stringify(json);
-
-    // An object of options to indicate where to post to
-    var post_options = {
-        host: 'localhost',
-        port: '7000',
-        path: '/logger/in',
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Content-Length': Buffer.byteLength(post_data)
-        }
-    };
-
-    // Set up the request
-    var post_req = http.request(post_options, function(res) {
-        res.setEncoding('utf8');
-        res.on('data', function (chunk) {
-            console.log('Response: ' + chunk);
-        });
-    });
-
-    // post the data
-    post_req.write(post_data);
-    post_req.end();
-}
-
-
-// Usage Example:
+// Logging Examples:
 
 // log a string
 let str = "Hello HypnoLog from JavaScript!";
-log(str, "string");
+HL.log(str, "string");
 
 // log numbers array
 let numbers =  Array.from({length: 50}, (v, i) => (i*10)%100 + Math.floor(Math.random() * 10));
-log("Example of logging Array of numbers:", "string");
-log(numbers, "plot");
+HL.log("Example of logging Array of numbers:", "string");
+HL.log(numbers, "plot");
 
 // TODO: Multi line graph
 
@@ -67,8 +30,8 @@ let locations = [
     [37.6153, -122.3900, 'Airport'],
     [37.4422, -122.1731, 'Shopping']
 ];
-log("Example of logging Lat-Long Geo locations using Google maps:", "string");
-log(locations, "GoogleMaps");
+HL.log("Example of logging Lat-Long Geo locations using Google maps:", "string");
+HL.log(locations, "GoogleMaps");
 
 // log custom object
 let rectangle = {
@@ -76,9 +39,9 @@ let rectangle = {
     width : 10,
     color : "green"
 }
-log("Example of logging custom object:", "string");
+HL.log("Example of logging custom object:", "string");
 // note, default logging type is "object"
-log(rectangle);
+HL.log(rectangle);
 
 // log custom object with nested custom objects
 let car = {
@@ -90,8 +53,8 @@ let car = {
         },
         color : "red"
     };
-log("Example of logging custom object with nested custom objects:", "string");
-log(car);
+HL.log("Example of logging custom object with nested custom objects:", "string");
+HL.log(car);
 
 // TODO: Example of logging with tags
 
