@@ -1,5 +1,6 @@
-// Hypnolog-node Usage Examples:
+// HypnoLog NodeJS usage examples:
 
+// import HypnoLog as HL
 var HL = require('./hypnolog');
 
 // Logging Examples:
@@ -61,6 +62,4 @@ let car = {
     };
 HL.log("Example of logging custom object with nested custom objects:", "s");
 HL.log(car);
-
-// TODO: Example of logging with tags
 
