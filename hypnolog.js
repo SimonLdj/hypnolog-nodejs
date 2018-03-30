@@ -63,8 +63,13 @@ function log(data, type) {
     // wrap all in try..catch so HypnoLog will not disturb natural code flow
     try {
         // check arguments and set default value
-        if (typeof data === "undefined")
-            data = typeof undefined;
+        // `undefined` will be logged as "undefined" of type "object"
+        // (as we can not actually send message without data to the server)
+        // note: `null` serialized as "null".
+        if (typeof data === "undefined") {
+            data = "undefined";
+            type = "object";
+        }
         if (typeof type !== "string")
             type = determineObjectType(data);
 
