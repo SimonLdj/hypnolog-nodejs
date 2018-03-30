@@ -7,11 +7,11 @@ var HL = require('./hypnolog');
 
 // log a string
 let str = "Hello HypnoLog from JavaScript!";
-HL.log(str, "string"); // hint: use 's' instead of 'string'
+HL.log(str);
 
 // log numbers array
 let numbers =  Array.from({length: 50}, (v, i) => (i*10)%100 + Math.floor(Math.random() * 10));
-HL.log("Example of logging Array of numbers:", "s");
+HL.log("Example of logging Array of numbers:");
 HL.log(numbers, "plot");
 
 // TODO: Multi line graph
@@ -24,7 +24,7 @@ for (let i = 0; i < 10; i++) {
         arr2d[i][j] = i*10 + j;
     }
 }
-HL.log("Example of logging 2d number array as Heatmap:", "s");
+HL.log("Example of logging 2d number array as Heatmap:");
 HL.log(arr2d, "heatmap");
 
 // TODO: histogram
@@ -37,7 +37,7 @@ let locations = [
     [37.6153, -122.3900, 'Airport'],
     [37.4422, -122.1731, 'Shopping']
 ];
-HL.log("Example of logging Lat-Long Geo locations using Google maps:", "s");
+HL.log("Example of logging Lat-Long Geo locations using Google maps:");
 HL.log(locations, "GoogleMaps");
 
 // log custom object
@@ -46,7 +46,7 @@ let rectangle = {
     width : 10,
     color : "green"
 }
-HL.log("Example of logging custom object:", "s");
+HL.log("Example of logging custom object:");
 // note, default logging type is "object"
 HL.log(rectangle);
 
@@ -60,6 +60,6 @@ let car = {
         },
         color : "red"
     };
-HL.log("Example of logging custom object with nested custom objects:", "s");
+HL.log("Example of logging custom object with nested custom objects:");
 HL.log(car);
 

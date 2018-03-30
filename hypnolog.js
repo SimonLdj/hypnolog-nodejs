@@ -66,7 +66,7 @@ function log(data, type) {
         if (typeof data === "undefined")
             data = typeof undefined;
         if (typeof type !== "string")
-            type = "object"
+            type = determineObjectType(data);
 
         // TODO: check initialize was done and server is up, before continue
         // TODO: do initialization if not done yet. Make sure it is blocking - so no 2
@@ -99,7 +99,7 @@ function log(data, type) {
             onError(new Error(`HypnoLog error: problem with request:\n${e.message}`));
         });
 
-        // post the data
+        // post the request to the server
         post_req.write(post_data);
         post_req.end();
     } catch (ex) {
@@ -116,6 +116,23 @@ function onError(error) {
         console.log("HypnoLog error occurred: ");
         console.log(error);
     }
+}
+
+/**
+ * Tries to determine given object type for HypnoLog.
+ *
+ * For now supporting only string. Default is "object".
+ *
+ * @return {string} object type.
+ */
+function determineObjectType(obj) {
+
+    // detect string
+    if (typeof obj === "string")
+        return "string";
+
+    // default is `object`
+    return "object";
 }
 
 // Define exports
