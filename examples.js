@@ -6,7 +6,7 @@ var HL = require('./hypnolog');
 // Logging Examples:
 
 // log a string
-let str = "Hello HypnoLog from JavaScript!";
+let str = "Hello HypnoLog from NodeJS!";
 HL.log(str);
 
 // log numbers array
