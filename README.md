@@ -19,19 +19,30 @@ This is a [Node.js](https://nodejs.org/en/) module available through the [npm re
 ```bash
 npm install hypnolog-nodejs
 ```
-## Usage
-Really simple. Import HypnoLog:
-```javascript
-var HL = require("hypnolog-nodejs")
-```
-Log:
-```javascript
-// Log a string
-HL.log('Hello HypnoLog from NodeJS!');
 
-// log array of numbers as a graph (plot)
-HL.log([1,2,3], "plot");
+If you haven't use *HypnoLog* before, [setup HypnoLog server](https://github.com/SimonLdj/hypnolog-server#setup-hypnolog-server) on your machine:
+```bash
+npm install -g hypnolog-server
 ```
+
+## Usage
+1. Start *HypnoLog* server:
+    ```bash
+    hypnolog-server
+    ```
+2. View output: open [`http://127.0.0.1:7000/client.html`](http://127.0.0.1:7000/client.html) in your browser.
+3. Import HypnoLog into your script:
+    ```javascript
+    var HL = require("hypnolog-nodejs")
+    ```
+4. Log:
+    ```javascript
+    // Log a string
+    HL.log('Hello HypnoLog from NodeJS!');
+    
+    // log array of numbers as a graph (plot)
+    HL.log([1,2,3], "plot");
+    ```
 
 For more examples, see [Basic Example](/examples.js) and [Advanced Example](advancedExamples.js) code files.
 
