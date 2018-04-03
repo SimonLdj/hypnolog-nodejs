@@ -1,11 +1,15 @@
 {
   "name": "hypnolog-nodejs",
   "version": "0.1.0",
-  "description": "Node.js client for Hypnolog server",
-  "main": "main.js",
+  "description": "Node.js wrapper for quick logging using HypnoLog",
+  "main": "hypnolog.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Simon Ladyzhinski",
-  "license": "ISC"
+  "author": "SimonLdj",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/SimonLdj/hypnolog-nodejs.git"
+  },
+  "license": "MIT"
 }
