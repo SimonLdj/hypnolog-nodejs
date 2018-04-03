@@ -11,14 +11,18 @@ HypnoLog NodeJS Library
 What it looks like, visualizing your data in the browser:
 ![alt text](/doc/images/screenshot_hypnolog-nodejs-example.png "HypnoLog UI screenshot")
 
-## About HypnoLog NodeJS Library
+## About HypnoLog-NodeJS Library
 Logging using *HypnoLog* means sending you data as JSON HTTP request to HypnoLog server. This library wraps all of those into simple easy to use functions.
-<!--TODO: To use *HypnoLog* in your NodeJS script ... -->
 
-## Usage Examples
+## Installation
+This is a [Node.js](https://nodejs.org/en/) module available through the [npm registry](https://www.npmjs.com/).
+```bash
+npm install hypnolog-nodejs
+```
+## Usage
 Really simple. Import HypnoLog:
 ```javascript
-var HL = require('./hypnolog');
+var HL = require("hypnolog-nodejs")
 ```
 Log:
 ```javascript

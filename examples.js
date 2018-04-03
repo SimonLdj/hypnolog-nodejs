@@ -1,7 +1,10 @@
-// HypnoLog NodeJS usage examples:
+// HypnoLog NodeJS basic usage examples:
 
-// import HypnoLog as HL
+// Import HypnoLog as HL
 var HL = require('./hypnolog');
+// Note: When using from npm, require like this:
+//var HL = require("hypnolog-nodejs")
+
 
 // Logging Examples:
 
