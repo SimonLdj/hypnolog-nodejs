@@ -1,6 +1,6 @@
 {
   "name": "hypnolog-nodejs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node.js wrapper for quick logging using HypnoLog",
   "main": "hypnolog.js",
   "scripts": {
@@ -8,8 +8,8 @@
   },
   "author": "SimonLdj",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/SimonLdj/hypnolog-nodejs.git"
+    "type": "git",
+    "url": "https://github.com/SimonLdj/hypnolog-nodejs.git"
   },
   "license": "MIT"
 }
