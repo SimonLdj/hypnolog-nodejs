@@ -1,12 +1,11 @@
 var http = require('http');
 
 // TODO: handle when server is down, disable logger
-// TODO: document according to node/javascript style
 // TODO: provide alternative when logger is disabled
 
 // default object of options to indicate where to post to
 let DEFAULT_POST_OPTIONS = {
-    host: 'localhost',
+    host: '127.0.0.1',
     port: '7000',
     path: '/logger/in',
     method: 'POST',
@@ -27,7 +26,7 @@ let isServerUp = true;
  * configurations.
  *
  * @param {Object}  options          - Logger options.
- * @param {Object}  options.host     - HypnoLog server host name. Default is "localhost".
+ * @param {Object}  options.host     - HypnoLog server host name. Default is "127.0.0.1".
  * @param {Object}  options.port     - HypnoLog server port. Default is 7000.
  * @param {function} options.errorCallback     - Function to call when inner HypnoLog error occurred. Of signature (error).
  *

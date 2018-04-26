@@ -1,7 +1,6 @@
 HypnoLog-nodejs TODO list
 ===================================
 
-- make it as a package/library
 - handle when server is down (once, in init)
 - send new session message on init
 - solve async issues (?) (logged data might appear in incorrect order)
