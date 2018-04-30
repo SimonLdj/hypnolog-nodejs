@@ -2,8 +2,8 @@
 
 // Import HypnoLog as HL
 var HL = require('./hypnolog');
-// Note: When using from npm, require like this:
-//var HL = require("hypnolog-nodejs")
+// Note: When using from npm, require by package name 'hypnolog-nodejs':
+//var HL = require("hypnolog-nodejs");
 
 
 // Logging Examples:

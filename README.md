@@ -12,7 +12,7 @@ What it looks like, visualizing your data in the browser:
 ![alt text](/doc/images/screenshot_hypnolog-nodejs-example.png "HypnoLog UI screenshot")
 
 ## About HypnoLog-NodeJS Library
-Logging using *HypnoLog* means sending you data as JSON HTTP request to HypnoLog server. This library wraps all of those into simple easy to use functions.
+Logging using *HypnoLog* means sending your data as JSON HTTP request to HypnoLog server. This library wraps all of those into simple easy to use functions.
 
 ## Installation
 This is a [Node.js](https://nodejs.org/en/) module available through the [npm registry](https://www.npmjs.com/).
@@ -26,7 +26,7 @@ npm install -g hypnolog-server
 ```
 
 ## Usage
-1. Start *HypnoLog* server:
+1. Start [HypnoLog Server]:
     ```bash
     hypnolog-server
     ```
@@ -48,3 +48,6 @@ For more examples, see [Basic Example](/examples.js) and [Advanced Example](adva
 
 Read how to view the log and more about *HypnoLog* in [HypnoLog main repo page](https://github.com/SimonLdj/hypnolog-server).
 
+
+
+[HypnoLog Server]: https://github.com/SimonLdj/hypnolog-server
